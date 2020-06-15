@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="my">
+        <h1>University Official Information</h1>
+    </div>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>University </td>
+                <td>{{officialInfo.fullName}} ({{officialInfo.shortName}})</td>
+            </tr>
+            <tr>
+                <td>University Category</td>
+                <td>{{officialInfo.uniCategory}} [{{officialInfo.uniType}}]</td>
+            </tr>
+            <tr>
+                <td>University Established Date</td>
+                <td>{{officialInfo.estDate |date}}</td>
+            </tr>
+            <tr>
+                <td>University Motto</td>
+                <td>{{officialInfo.motto}}</td>
+            </tr>
+            <tr>
+                <td>University Chancellor</td>
+                <td>{{officialInfo.chancellor}}</td>
+            </tr>
+            <tr>
+                <td>University Vice Chancellor</td>
+                <td>{{officialInfo.vc}}</td>
+            </tr>
+            <tr>
+                <td>University Location</td>
+                <td>{{officialInfo.uniAddress}}, {{officialInfo.division}}</td>
+            </tr>
+            <tr>
+                <td>University Contact No.</td>
+                <td>{{officialInfo.contactNo}}</td>
+            </tr>
+            <tr>
+                <td>University Website</td>
+                <td><a target="_new" href="https://{{officialInfo.website}}">{{officialInfo.website}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="my">
+        <h1>Faculty Information</h1>
+    </div>
+    <table class="table">
+        <th>Faculty ID</th>
+        <th>Faculty Name</th>
+        <th>Faculty Dean</th>
+        <tbody>
+            <tr *ngFor="let data of facultyList">
+                <!-- <td><a routerLink="/view/official-info/{{officialInfo.universityID}}" 
+                        (click)="passID()">
+                        {{officialInfo.fullName}}</a>
+                    </td> -->
+                <td>{{data.facultyID}}</td>
+                <td>{{data.fullName}} [{{data.shortName}}]</td>
+                <td>{{data.dean}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

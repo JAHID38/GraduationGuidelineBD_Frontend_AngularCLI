@@ -1,0 +1,32 @@
+<div class="container">
+    <h3 [hidden] >Faculty Information Form</h3>
+    <h1 class="alert alert-success" *ngIf="message">{{message}}</h1>
+    <form class="form-group">
+
+        <label class="col-form-label-lg">University Name</label>
+        <select class="input-group-text col-md-6" name="university"
+        [(ngModel)]="faculty.universityID">
+            <option *ngFor="let data of university" value="{{data.universityID}}">
+                {{data.fullName}} [{{data.shortName}}]
+            </option>
+        </select>
+        <label>{{faculty.universityID}}</label>
+
+
+        <label class="col-form-label-lg">Faculty Full Name</label>
+        <input class="input-group-text col-md-6" required="required" type="text" name="fullName"
+        [(ngModel)]="faculty.fullName" />
+
+        <label class="col-form-label-lg">Faculty Short Name</label>
+        <input class="input-group-text col-md-6" required type="text" name="shortName" 
+        [(ngModel)]="faculty.shortName"/>
+
+        <label class="col-form-label-lg">Faculty Dean</label>
+        <input class="input-group-text col-md-6" required type="text" name="dean" 
+        [(ngModel)]="faculty.dean"/>
+
+        <button (click)="registerFaculty()" class="btn btn-info">Register Faculty</button>
+
+
+    </form>
+</div>

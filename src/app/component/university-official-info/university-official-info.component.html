@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="container-fluid">
+        <h1> University Official Information Registration Form </h1>
+    </div>
+
+    <div class="container">
+        <h2 *ngIf="message" class="alert alert-success">{{message}}</h2>
+    </div>
+
+    <div class="container">
+        <form class="">
+            <div class="container">
+                <fieldset class="">
+                    <label class="col-form-label-lg">University Full Name</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.fullName"
+                        name="fullName" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Short Name</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.shortName"
+                        name="shortName" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset class="">
+                    <label class="col-form-label-lg">University Type</label>
+                    <select class="input-group-text col-6" required [(ngModel)]="offInfo.uniType" name="uniType">
+                        <option>Public</option>
+                        <option>Private</option>
+                        <option>International</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Category</label>
+                    <select class="input-group-text col-6" required [(ngModel)]="offInfo.uniCategory"
+                        name="uniCategory">
+                        <option>Agricultural</option>
+                        <option>Business</option>
+                        <option>Engineering</option>
+                        <option>General</option>
+                        <option>Science and Technology</option>
+                        <option>Textile</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Established Date</label>
+                    <input class="input-group-text col-md-6" required type="date" [(ngModel)]="offInfo.estDate"
+                        name="estDate" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Address</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.uniAddress"
+                        name="uniAddress" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">Division</label>
+                    <select class="input-group-text col-6" required [(ngModel)]="offInfo.division" name="division">
+                        <option>Barishal</option>
+                        <option>Cumilla</option>
+                        <option>Dhaka</option>
+                        <option>Jeshore</option>
+                        <option>Mymensingh</option>
+                        <option>Rajshahi</option>
+                        <option>Rangpur</option>
+                        <option>Sylhet</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Motto</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.motto"
+                        name="motto" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Chancellor</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.chancellor"
+                        name="chancelor" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Vice Chancellor</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.vc" name="vc" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Contact No.</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.contactNo"
+                        name="contactNo" />
+                </fieldset>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <label class="col-form-label-lg">University Website</label>
+                    <input class="input-group-text col-md-6" required type="text" [(ngModel)]="offInfo.website"
+                        name="website" />
+                </fieldset>
+            </div>
+            <div class="container col-form-label-lg">
+                <button class="btn btn-info" (click)="officialInfoReg()">Register University</button>
+            </div>
+        </form>
+    </div>
+</div>

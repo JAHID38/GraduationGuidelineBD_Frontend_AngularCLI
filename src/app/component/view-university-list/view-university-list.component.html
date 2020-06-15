@@ -1,0 +1,47 @@
+
+   
+        <H1>University List</H1>
+    
+    <!-- <div class="container"> -->
+    <table class="table table-striped table-borderless table-active">
+
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>University Full Name</th>
+                <th>Short Name</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Established Date</th>
+                <th>Address</th>
+                <th>Division</th>
+                <th>University Motto</th>
+                <th>Chancellor</th>
+                <th>Vice Chancellor</th>
+                <th>Contact No.</th>
+                <th>Website</th>
+                <th colspan="2" align="center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let officialInfo of tableList">
+                <td>{{officialInfo.universityID}}</td>
+                <td><a routerLink="/view/official-info/{{officialInfo.universityID}}" (click)="passID()">
+                        {{officialInfo.fullName}}</a></td>
+                <td>{{officialInfo.shortName}}</td>
+                <td>{{officialInfo.uniType}}</td>
+                <td>{{officialInfo.uniCategory}}</td>
+                <td>{{officialInfo.estDate | date}}</td>
+                <td>{{officialInfo.uniAddress}}</td>
+                <td>{{officialInfo.division}}</td>
+                <td>{{officialInfo.motto}}</td>
+                <td>{{officialInfo.chancellor}}</td>
+                <td>{{officialInfo.vc}}</td>
+                <td>{{officialInfo.contactNo}}</td>
+                <td><a target="_new" href="https://{{officialInfo.website}}">{{officialInfo.website}}</a></td>
+                <td><button class="btn btn-success">Update</button></td>
+                <td><button class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- </div> -->
